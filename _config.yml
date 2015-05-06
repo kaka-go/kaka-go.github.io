@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Kejia.Wu 呉可嘉
+tagline:          'My Tech Blog'
+description:      ''
+url:              http://edward9145.github.io
+baseurl:          /
+
+author:
+  name:           'Kejia Wu'
+  url:            http://edward9145.github.io
+
+paginate:         5
+
+# Custom vars
+version:          Beta-1.0
+
+github:
+  repo:           https://github.com/edward9145/edward9145.github.io
