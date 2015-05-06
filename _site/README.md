@@ -1,3 +1,8 @@
-# My Home Page
+# My Tech Blog
 
-My [Jekyll](http://jekyllrb.com) blog with Hyde theme.
+Share my interesting experiences on tech.
+
+The website is built with [Jekyll](http://jekyllrb.com) and [Hyde](http://hyde.getpoole.com) theme.
+
+
+
