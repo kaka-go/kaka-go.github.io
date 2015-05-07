@@ -11,10 +11,23 @@
 @media (min-width: 48em) {
   .avatar {
   	width: 256px;
-	height: 256px;
+    height: 256px;
     border: 10px solid #eee;
     border-radius: 128px;
   }
+}
+
+.resume-avatar{
+    width: 128px;
+    height: 128px;
+    border: 5px solid #eee;
+    border-radius: 64px;
+    float: right;
+    margin-right: 15%
+}
+
+.split{
+    margin: 1.0rem 0;
 }
 
 .phone {

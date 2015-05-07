@@ -14,7 +14,7 @@ This blog posts my interesting experiences on tech.
   Have questions or suggestions? Feel free to contact me on <a href="https://twitter.com/Ededw">Twitter</a> or send me an <a href="mailto:edward9145@gmail.com">Email</a>.
 </p>
 
-## Fun facts
+## Familiar with
 
 - Editor: Vim, Sublime Text, Nodepad++
 - IDE: Eclipse, Webstorm
