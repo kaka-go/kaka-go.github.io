@@ -7,6 +7,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+.resume-avatar{
+    width: 128px;
+    height: 128px;
+    border: 5px solid #eee;
+    border-radius: 64px;
+    float: right;   
+}
 
 @media (min-width: 48em) {
   .avatar {
@@ -15,16 +22,12 @@
     border: 10px solid #eee;
     border-radius: 128px;
   }
+  .resume-avatar{
+    margin-right: 15%
+  }
 }
 
-.resume-avatar{
-    width: 128px;
-    height: 128px;
-    border: 5px solid #eee;
-    border-radius: 64px;
-    float: right;
-    margin-right: 15%
-}
+
 
 .split{
     margin: 1.0rem 0;
