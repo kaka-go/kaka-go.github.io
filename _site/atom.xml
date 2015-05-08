@@ -4,7 +4,7 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-08T02:47:14+09:00</updated>
+ <updated>2015-05-08T23:33:10+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
@@ -36,6 +36,22 @@
    <link href="http://edward9145.github.io/2015/05/06/mobile-cv/"/>
    <updated>2015-05-06T00:00:00+09:00</updated>
    <id>http://edward9145.github.io/2015/05/06/mobile-cv</id>
+   <content type="html">&lt;p&gt;content:
+&lt;div class=&quot;phone&quot;&gt;
+    &lt;iframe src=&quot;http://edw.ap01.aws.af.cm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;a href=&quot;http://edw.ap01.aws.af.cm&quot; target=&quot;_blank&quot; class=&quot;fullscreen&quot; sl-processed=&quot;1&quot;&gt;Fullscreen&lt;/a&gt;
+    &lt;button class=&quot;phone-home-btn&quot; onclick=&quot;document.location=&#39;/&#39;;&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p style=&quot;display:none;&quot;&gt;phone hollow class from http://www.idangero.us/framework7/#.VUnrotOqqko&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile C.V.</title>
+   <link href="http://edward9145.github.io/2013/10/07/mobile-cv/"/>
+   <updated>2013-10-07T00:00:00+09:00</updated>
+   <id>http://edward9145.github.io/2013/10/07/mobile-cv</id>
    <content type="html">&lt;p&gt;content:
 &lt;div class=&quot;phone&quot;&gt;
     &lt;iframe src=&quot;http://edw.ap01.aws.af.cm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
