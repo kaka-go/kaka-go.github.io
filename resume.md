@@ -3,7 +3,7 @@ layout: single
 title: Resume
 ---
 
-<img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/>
+<a href="/"><img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/></a>
 
 ## WU KEJIA　呉可嘉
 <hr class="split">
