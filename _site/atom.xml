@@ -4,13 +4,83 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-08T23:36:55+09:00</updated>
+ <updated>2015-05-10T03:03:52+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Develop App Dr.Seek - Admin Console</title>
+   <link href="http://edward9145.github.io/2015/05/10/dr-seek-admin-console/"/>
+   <updated>2015-05-10T00:00:00+09:00</updated>
+   <id>http://edward9145.github.io/2015/05/10/dr-seek-admin-console</id>
+   <content type="html">&lt;p&gt;Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.&lt;br&gt;
+&lt;img src=&quot;/public/img/drseek-icon.png&quot; width=&quot;64px&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;As the server side engineer of this app, I am going to share my experience of the development.&lt;/p&gt;
+
+&lt;h3&gt;Admin Console Website&lt;/h3&gt;
+
+&lt;h3&gt;API test page&lt;/h3&gt;
+
+&lt;h3&gt;Team Work&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Server: 2&lt;/li&gt;
+&lt;li&gt;Android: 1~2&lt;/li&gt;
+&lt;li&gt;iOS: 1&lt;/li&gt;
+&lt;li&gt;UI: 1 + outsource&lt;/li&gt;
+&lt;li&gt;Project Manager: 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;References&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tiexinyisheng.com&quot;&gt;Home Page &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8&quot;&gt;App Store &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Develop App Dr.Seek - Server Side</title>
+   <link href="http://edward9145.github.io/2015/05/09/dr-seek-server-side/"/>
+   <updated>2015-05-09T00:00:00+09:00</updated>
+   <id>http://edward9145.github.io/2015/05/09/dr-seek-server-side</id>
+   <content type="html">&lt;p&gt;Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.&lt;br&gt;
+&lt;img src=&quot;/public/img/drseek-icon.png&quot; width=&quot;64px&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;As the server side engineer of this app, I am going to share my experience of the development.&lt;/p&gt;
+
+&lt;h3&gt;Server Architecture&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;/public/img/drseek-server-architect.png&quot; data-lightbox=&quot;Server-Architecture&quot; data-title=&quot;Application Server Architecture&quot;&gt;
+    &lt;img src=&quot;/public/img/drseek-server-architect.png&quot; alt=&quot;Server-Architecture&quot;/&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nginx is used as a reverse proxy to redirect the HTTP request to Tomcat servers.&lt;/p&gt;
+
+&lt;p&gt;The Spring Web Project will always be packaged as WAR and depolyed on multi-Tomcat servers. 
+To quick test the new features and fix bugs, the project is automatically packaged to WAR and deployed to the test server when SVN &lt;code&gt;hooks/post-commit&lt;/code&gt;,
+When everything seems OK, go on deploying to the real servers.&lt;/p&gt;
+
+&lt;p&gt;To increase the speed to access data, &lt;code&gt;mybatis-redis&lt;/code&gt; is integrated to cache the database results.
+MySQL Database are configurated as Master-slave Replication, because the read/write may always &amp;gt; 1.
+(Here we didn&amp;#39;t use redis to share sticky session, although there is &lt;code&gt;Redis-Session-Manager&lt;/code&gt; for Tomcat, for we have config &lt;code&gt;ip_hash&lt;/code&gt; in Nginx) &lt;/p&gt;
+
+&lt;p&gt;Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
+Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.&lt;/p&gt;
+
+&lt;p&gt;// TODO
+openfire&lt;/p&gt;
+
+&lt;h3&gt;References&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tiexinyisheng.com&quot;&gt;Home Page &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8&quot;&gt;App Store &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>TODO</title>

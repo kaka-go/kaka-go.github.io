@@ -66,7 +66,7 @@ Exchange to Information Science College
 
 <!---
 ### More
-I have have ever made some casual games by flash, cocos2d-x, HTML5+JS. Hope you like it.
+In my spare time, I have have ever made some casual games by flash, cocos2d-x, HTML5+JS. Hope you like it.
 [Flappy Beetle](https://itunes.apple.com/cn/app/beetle-flappy/id900088570?l=en&mt=8)
 [Best Scorer](http://wukejia.ninja/best-scorer)
 -->

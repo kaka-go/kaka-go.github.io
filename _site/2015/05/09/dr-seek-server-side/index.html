@@ -11,7 +11,7 @@
 
   <title>
     
-      What's Jekyll? &middot; Kejia.Wu 呉可嘉
+      Develop App Dr.Seek - Server Side &middot; Kejia.Wu 呉可嘉
     
   </title>
 
@@ -102,17 +102,39 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">What's Jekyll?</h1>
-  <span class="post-date">06 Feb 2012</span>
-  <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project&#39;s readme</a>:</p>
+  <h1 class="post-title">Develop App Dr.Seek - Server Side</h1>
+  <span class="post-date">09 May 2015</span>
+  <p>Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.<br>
+<img src="/public/img/drseek-icon.png" width="64px"/></p>
 
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
+<p>As the server side engineer of this app, I am going to share my experience of the development.</p>
 
-<p>It&#39;s an immensely useful tool and one we encourage you to use here with Hyde.</p>
+<h3>Server Architecture</h3>
 
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+<p><a href="/public/img/drseek-server-architect.png" data-lightbox="Server-Architecture" data-title="Application Server Architecture">
+    <img src="/public/img/drseek-server-architect.png" alt="Server-Architecture"/>
+</a></p>
+
+<p>Nginx is used as a reverse proxy to redirect the HTTP request to Tomcat servers.</p>
+
+<p>The Spring Web Project will always be packaged as WAR and depolyed on multi-Tomcat servers. 
+To quick test the new features and fix bugs, the project is automatically packaged to WAR and deployed to the test server when SVN <code>hooks/post-commit</code>,
+When everything seems OK, go on deploying to the real servers.</p>
+
+<p>To increase the speed to access data, <code>mybatis-redis</code> is integrated to cache the database results.
+MySQL Database are configurated as Master-slave Replication, because the read/write may always &gt; 1.
+(Here we didn&#39;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
+
+<p>Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
+Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.</p>
+
+<p>// TODO
+openfire</p>
+
+<h3>References</h3>
+
+<p><a href="http://www.tiexinyisheng.com">Home Page <i class="fa fa-link"></i></a><br>
+<a href="https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8">App Store <i class="fa fa-link"></i></a></p>
 
 </div>
 
@@ -131,18 +153,18 @@
     
       <li>
         <h3>
-          <a href="/2015/05/09/dr-seek-server-side/">
-            Develop App Dr.Seek - Server Side
-            <small>09 May 2015</small>
+          <a href="/2015/05/08/todo/">
+            TODO
+            <small>08 May 2015</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/2015/05/08/todo/">
-            TODO
-            <small>08 May 2015</small>
+          <a href="/2015/05/06/mobile-cv/">
+            Mobile C.V.
+            <small>06 May 2015</small>
           </a>
         </h3>
       </li>
