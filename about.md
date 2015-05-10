@@ -23,5 +23,5 @@ This blog posts my interesting experiences on tech.
 
 --------------
 
-Thanks for reading!
+Thanks for reading! Have fun 
 <a href="../best-scorer/">(｀･ω･´)ゞ</a>

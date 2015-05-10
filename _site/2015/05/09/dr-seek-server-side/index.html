@@ -119,7 +119,7 @@
 
 <p>As the server side engineer of this app, I am going to share my experience of the development.</p>
 
-<h3>Server Architecture</h3>
+<h3 id="server-architecture">Server Architecture</h3>
 
 <p><a href="/public/img/drseek-server-architect.jpg" data-lightbox="Server-Architecture" data-title="Application Server Architecture">
     <img src="/public/img/drseek-server-architect.jpg" alt="Server-Architecture"/>
@@ -133,20 +133,20 @@ When everything seems OK, go on deploying to the real servers.</p>
 
 <p>To increase the speed to access data, <code>mybatis-redis</code> is integrated to cache the database results.
 MySQL Database are configurated as Master-slave Replication, because the read/write may always &gt; 1.
-(Here we didn&#39;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
+(Here we didn&rsquo;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
 
 <p>Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.</p>
 
 <p>Inspired by talking with an engineer of momo, we use <code>openfire</code> as RTC server for instant messaging.
-It&#39;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
-(NG: When there are more than 2000 people in one&#39;s contact book, it may cause uncompletely transfer problem.) </p>
+It&rsquo;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
+(NG: When there are more than 2000 people in one&rsquo;s contact book, it may cause uncompletely transfer problem.) </p>
 
 <p>Users can upload images and attachments to Web Server. 
 Web server handles the upload files, copy them to File Server, and store URL mapping into DB. 
 (To avoid uploading duplicated file, check existance on server by MD5 checksum for the file before upload)</p>
 
-<h3>About the App</h3>
+<h3 id="about-the-app">About the App</h3>
 
 <p><img src="/public/img/drseek-icon.png" width="64px"/></p>
 
@@ -158,6 +158,15 @@ Web server handles the upload files, copy them to File Server, and store URL map
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/05/10/front-end-developer-interview/">
+            Front-end Developer Interview Questions
+            <small>10 May 2015</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -173,15 +182,6 @@ Web server handles the upload files, copy them to File Server, and store URL map
           <a href="/2015/05/08/todo/">
             TODO
             <small>08 May 2015</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/05/06/mobile-cv/">
-            Mobile C.V.
-            <small>06 May 2015</small>
           </a>
         </h3>
       </li>

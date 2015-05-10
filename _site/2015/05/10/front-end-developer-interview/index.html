@@ -11,7 +11,7 @@
 
   <title>
     
-      Kejia.Wu 呉可嘉 &middot; My Tech Blog
+      Front-end Developer Interview Questions &middot; Kejia.Wu 呉可嘉
     
   </title>
 
@@ -64,7 +64,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">Home</a>
+      <a class="sidebar-nav-item" href="/">Home</a>
 
       
 
@@ -112,19 +112,10 @@
 
 
     <div class="content container">
-      <div class="posts">
-  
-  <div class="post" style="margin-bottom: 0;">
-    <h1 class="post-title">
-      <a href="/2015/05/10/front-end-developer-interview/">
-        Front-end Developer Interview Questions
-      </a>
-    </h1>
-
-    <span class="post-date">10 May 2015</span>
-
-    my answers for <a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">Front-end Developer Interview Questions</a>
-    <!--<p><a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">View the Project on Github</a></p>
+      <div class="post">
+  <h1 class="post-title">Front-end Developer Interview Questions</h1>
+  <span class="post-date">10 May 2015</span>
+  <p><a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">View the Project on Github</a></p>
 
 <p>A list of helpful front-end related questions, just test myself</p>
 
@@ -419,170 +410,58 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 <p>This document started in 2009 as a collaboration of <a href="https://twitter.com/paul_irish">@paul_irish</a> <a href="https://twitter.com/bentruyman">@bentruyman</a> <a href="https://twitter.com/cowboy">@cowboy</a> <a href="https://twitter.com/ajpiano">@ajpiano</a>  <a href="https://twitter.com/slexaxton">@SlexAxton</a> <a href="https://twitter.com/boazsender">@boazsender</a> <a href="https://twitter.com/miketaylr">@miketaylr</a> <a href="https://twitter.com/vladikoff">@vladikoff</a> <a href="https://twitter.com/gf3">@gf3</a> <a href="https://twitter.com/jon_neal">@jon_neal</a> <a href="https://twitter.com/sambreed">@sambreed</a> and <a href="https://twitter.com/iansym">@iansym</a>.</p>
 
 <p>It has since received contributions from over <a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors">100 developers</a>.</p>
--->
-    <hr>
-  </div>
 
-  
-  <div class="post" style="margin-bottom: 0;">
-    <h1 class="post-title">
-      <a href="/2015/05/10/dr-seek-admin-console/">
-        Develop App Dr.Seek - Admin Console
-      </a>
-    </h1>
-
-    <span class="post-date">10 May 2015</span>
-
-    App Dr.Seek(贴心医生), Admin Console Development <img src="/public/img/drseek-dashboard.png"/>
-    <!--<p>Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.<br></p>
-
-<p>As the server side engineer of this app, I am going to share my experience of the development.</p>
-
-<h3 id="admin-console-website">Admin Console Website</h3>
-
-<p><a href="/public/img/drseek-dashboard.png" data-lightbox="console-dashboard" data-title="Admin Console Dashboard">
-    <img src="/public/img/drseek-dashboard.png" alt="console-dashboard"/>
-</a></p>
-
-<p><a href="/public/img/drseek-user-prop.png" data-lightbox="console-dashboard" data-title="Admin Console User Property">
-    <img src="/public/img/drseek-user-prop.png" alt="console-user-prop"/>
-</a></p>
-
-<h3 id="api-test-page">API test page</h3>
-
-<h3 id="team-work">Team Work</h3>
-
-<ul>
-<li>Server: 2</li>
-<li>Android: 1~2</li>
-<li>iOS: 1</li>
-<li>UI: 1 + outsource</li>
-<li>Project Manager: 1</li>
-</ul>
-
-<h3 id="about-the-app">About the App</h3>
-
-<p><img src="/public/img/drseek-icon.png" width="64px"/></p>
-
-<p><a href="http://www.tiexinyisheng.com">Home Page <i class="fa fa-link"></i></a><br>
-<a href="https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8">App Store <i class="fa fa-link"></i></a></p>
--->
-    <hr>
-  </div>
-
-  
-  <div class="post" style="margin-bottom: 0;">
-    <h1 class="post-title">
-      <a href="/2015/05/09/dr-seek-server-side/">
-        Develop App Dr.Seek - Server Side
-      </a>
-    </h1>
-
-    <span class="post-date">09 May 2015</span>
-
-    App Dr.Seek(贴心医生) Server side architecture in brief <img src="/public/img/drseek-server-architect.jpg"/>
-    <!--<p>Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.<br></p>
-
-<p>As the server side engineer of this app, I am going to share my experience of the development.</p>
-
-<h3 id="server-architecture">Server Architecture</h3>
-
-<p><a href="/public/img/drseek-server-architect.jpg" data-lightbox="Server-Architecture" data-title="Application Server Architecture">
-    <img src="/public/img/drseek-server-architect.jpg" alt="Server-Architecture"/>
-</a></p>
-
-<p>Nginx is used as a reverse proxy to redirect the HTTP request to Tomcat servers.</p>
-
-<p>The Spring Web Project will always be packaged as WAR and depolyed on multi-Tomcat servers. 
-To quick test the new features and fix bugs, the project is automatically packaged to WAR and deployed to the test server when SVN <code>hooks/post-commit</code>,
-When everything seems OK, go on deploying to the real servers.</p>
-
-<p>To increase the speed to access data, <code>mybatis-redis</code> is integrated to cache the database results.
-MySQL Database are configurated as Master-slave Replication, because the read/write may always &gt; 1.
-(Here we didn&rsquo;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
-
-<p>Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
-Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.</p>
-
-<p>Inspired by talking with an engineer of momo, we use <code>openfire</code> as RTC server for instant messaging.
-It&rsquo;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
-(NG: When there are more than 2000 people in one&rsquo;s contact book, it may cause uncompletely transfer problem.) </p>
-
-<p>Users can upload images and attachments to Web Server. 
-Web server handles the upload files, copy them to File Server, and store URL mapping into DB. 
-(To avoid uploading duplicated file, check existance on server by MD5 checksum for the file before upload)</p>
-
-<h3 id="about-the-app">About the App</h3>
-
-<p><img src="/public/img/drseek-icon.png" width="64px"/></p>
-
-<p><a href="http://www.tiexinyisheng.com">Home Page <i class="fa fa-link"></i></a><br>
-<a href="https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8">App Store <i class="fa fa-link"></i></a></p>
--->
-    <hr>
-  </div>
-
-  
-  <div class="post" style="margin-bottom: 0;">
-    <h1 class="post-title">
-      <a href="/2015/05/08/todo/">
-        TODO
-      </a>
-    </h1>
-
-    <span class="post-date">08 May 2015</span>
-
-    Just start the blog from last week. Here are some blogs I am going to post.
-    <!--<ul>
-<li><del>Resume Page</del></li>
-<li>Summary of Dr.Seek(贴心医生)App, including Server Admin Console Development, HTTP APIs&hellip;</li>
-<li>API test page by AngularJS</li>
-<li>usage of China SVG map</li>
-<li>blood pressure charts and calendar by highchart.js</li>
-<li>flappy beetle with Cocos2d-x in 30-mins</li>
-<li>Best Scorer, an bastketball game dev with HTML5 canvas</li>
-<li>user-based slopeone algorithm</li>
-<li>try presentation js lib, never use powerpoint again</li>
-</ul>
--->
-    <hr>
-  </div>
-
-  
-  <div class="post" style="margin-bottom: 0;">
-    <h1 class="post-title">
-      <a href="/2015/05/06/mobile-cv/">
-        Mobile C.V.
-      </a>
-    </h1>
-
-    <span class="post-date">06 May 2015</span>
-
-    My resume before I was graduated from Beihang University, it's a page in iPhone perspective.
-    <!--<div class="phone">
-    <iframe src="http://edw.ap01.aws.af.cm" frameborder="0"></iframe>
-    <a href="http://edw.ap01.aws.af.cm" target="_blank" class="fullscreen" sl-processed="1">Fullscreen</a>
-    <button class="phone-home-btn" onclick="document.location='/';"></button>
 </div>
 
-<div style="height:600px"></div>
-
-<p style="display:none;">phone hollow class from http://www.idangero.us/framework7/#.VUnrotOqqko</p>
--->
-    <hr>
-  </div>
-
-  
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/05/10/dr-seek-admin-console/">
+            Develop App Dr.Seek - Admin Console
+            <small>10 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/05/09/dr-seek-server-side/">
+            Develop App Dr.Seek - Server Side
+            <small>09 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/05/08/todo/">
+            TODO
+            <small>08 May 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
 
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page2">Older</a>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
-</div>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kejiawu'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
     </div>
 
   </body>
