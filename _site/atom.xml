@@ -4,7 +4,7 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-10T03:03:52+09:00</updated>
+ <updated>2015-05-10T12:40:05+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
@@ -48,8 +48,7 @@
    <link href="http://edward9145.github.io/2015/05/09/dr-seek-server-side/"/>
    <updated>2015-05-09T00:00:00+09:00</updated>
    <id>http://edward9145.github.io/2015/05/09/dr-seek-server-side</id>
-   <content type="html">&lt;p&gt;Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.&lt;br&gt;
-&lt;img src=&quot;/public/img/drseek-icon.png&quot; width=&quot;64px&quot;/&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;As the server side engineer of this app, I am going to share my experience of the development.&lt;/p&gt;
 
@@ -73,7 +72,7 @@ MySQL Database are configurated as Master-slave Replication, because the read/wr
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.&lt;/p&gt;
 
 &lt;p&gt;// TODO
-openfire&lt;/p&gt;
+openfire &lt;/p&gt;
 
 &lt;h3&gt;References&lt;/h3&gt;
 
@@ -106,12 +105,13 @@ openfire&lt;/p&gt;
    <link href="http://edward9145.github.io/2015/05/06/mobile-cv/"/>
    <updated>2015-05-06T00:00:00+09:00</updated>
    <id>http://edward9145.github.io/2015/05/06/mobile-cv</id>
-   <content type="html">&lt;p&gt;content:
-&lt;div class=&quot;phone&quot;&gt;
+   <content type="html">&lt;div class=&quot;phone&quot;&gt;
     &lt;iframe src=&quot;http://edw.ap01.aws.af.cm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
     &lt;a href=&quot;http://edw.ap01.aws.af.cm&quot; target=&quot;_blank&quot; class=&quot;fullscreen&quot; sl-processed=&quot;1&quot;&gt;Fullscreen&lt;/a&gt;
     &lt;button class=&quot;phone-home-btn&quot; onclick=&quot;document.location=&#39;/&#39;;&quot;&gt;&lt;/button&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;height:600px&quot;&gt;&lt;/div&gt;
 
 &lt;p style=&quot;display:none;&quot;&gt;phone hollow class from http://www.idangero.us/framework7/#.VUnrotOqqko&lt;/p&gt;
 </content>

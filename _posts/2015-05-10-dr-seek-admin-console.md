@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: false
 title: Develop App Dr.Seek - Admin Console 
 brief: App Dr.Seek(贴心医生), Admin Console Development <img src="/public/img/drseek-icon.png" width="64px"/>
 ---

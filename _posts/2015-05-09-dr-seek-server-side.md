@@ -1,11 +1,10 @@
 ---
 layout: post
 title: Develop App Dr.Seek - Server Side
-brief: App Dr.Seek(贴心医生) Server side architecture in brief <img src="/public/img/drseek-icon.png" width="64px"/>
+brief: App Dr.Seek(贴心医生) Server side architecture in brief <img src="/public/img/drseek-server-architect.png"/>
 ---
 
 Dr.Seek(贴心医生) is an app for bringing smooth comunication between doctor and patient, make the efficient treatment possible.<br>
-<img src="/public/img/drseek-icon.png" width="64px"/>
 
 As the server side engineer of this app, I am going to share my experience of the development.
 
@@ -29,7 +28,7 @@ Case History is one of important features in the app. Medical record and treatme
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.
 
 // TODO
-openfire
+openfire 
 
 
 ### References
