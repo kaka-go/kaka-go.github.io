@@ -4,7 +4,7 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-10T12:40:05+09:00</updated>
+ <updated>2015-05-10T18:31:43+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
@@ -54,8 +54,8 @@
 
 &lt;h3&gt;Server Architecture&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;/public/img/drseek-server-architect.png&quot; data-lightbox=&quot;Server-Architecture&quot; data-title=&quot;Application Server Architecture&quot;&gt;
-    &lt;img src=&quot;/public/img/drseek-server-architect.png&quot; alt=&quot;Server-Architecture&quot;/&gt;
+&lt;p&gt;&lt;a href=&quot;/public/img/drseek-server-architect.jpg&quot; data-lightbox=&quot;Server-Architecture&quot; data-title=&quot;Application Server Architecture&quot;&gt;
+    &lt;img src=&quot;/public/img/drseek-server-architect.jpg&quot; alt=&quot;Server-Architecture&quot;/&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Nginx is used as a reverse proxy to redirect the HTTP request to Tomcat servers.&lt;/p&gt;
@@ -71,10 +71,17 @@ MySQL Database are configurated as Master-slave Replication, because the read/wr
 &lt;p&gt;Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.&lt;/p&gt;
 
-&lt;p&gt;// TODO
-openfire &lt;/p&gt;
+&lt;p&gt;Inspired by talking with an engineer of momo, we use &lt;code&gt;openfire&lt;/code&gt; as RTC server for instant messaging.
+It&amp;#39;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
+(NG: When there are more than 2000 people in one&amp;#39;s contact book, it may cause uncompletely transfer problem.) &lt;/p&gt;
 
-&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;Users can upload images and attachments to Web Server. 
+Web server handles the upload files, copy them to File Server, and store URL mapping into DB. 
+(To avoid uploading duplicated file, check existance on server by MD5 checksum for the file before upload)&lt;/p&gt;
+
+&lt;h3&gt;About the App&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/drseek-icon.png&quot; width=&quot;64px&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.tiexinyisheng.com&quot;&gt;Home Page &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8&quot;&gt;App Store &lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
