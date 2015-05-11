@@ -4,7 +4,7 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-11T00:43:32+09:00</updated>
+ <updated>2015-05-12T01:26:56+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
@@ -42,10 +42,26 @@
 I started my tech blog with Jekyll last week, tried YEOMAN to generated website and keep on learning AngularJS, ReactJS, the scaffold is so cool(yo+npm+bower+grunt/gulp).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;What excites or interests you about coding?&lt;br&gt;
 Make ideas come true. It just works.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What is a recent technical challenge you experienced and how did you solve it?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What is a recent technical challenge you experienced and how did you solve it?&lt;br&gt;
+When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!---
+- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it&#39;s possible to add more server to pull the request and do process.
+--&gt;
+
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Talk about your preferred development environment.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Which version control systems are you familiar with?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Talk about your preferred development environment.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Monitor &amp;gt;= 2 (vertical one could be better)&lt;/li&gt;
+&lt;li&gt;Internet access (connection speeds &amp;gt; 10Mbps could be better)&lt;/li&gt;
+&lt;li&gt;Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch refreshes all platform automatically at the same time when saving the code)&lt;/li&gt;
+&lt;li&gt;Juice and coffee&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which version control systems are you familiar with?&lt;br&gt;
+Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Can you describe your workflow when you create a web page?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you have 5 different stylesheets, how would you best integrate them into the site?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Can you describe the difference between progressive enhancement and graceful degradation?&lt;/p&gt;&lt;/li&gt;
@@ -68,7 +84,22 @@ Make ideas come true. It just works.&lt;/p&gt;&lt;/li&gt;
 &lt;h4 id=&quot;-html-questions:&quot;&gt;&lt;a href=&quot;#contents&quot;&gt;&lt;i id=&quot;html-questions&quot; class=&quot;fa fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt; HTML Questions:&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What does a &lt;code&gt;doctype&lt;/code&gt; do?&lt;/li&gt;
+&lt;li&gt;What does a &lt;code&gt;doctype&lt;/code&gt; do?&lt;br&gt;
+&amp;lt;!DOCTYPE&amp;gt; declare the type fo the page, so that the browser can render the content correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- HTML5 --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;writting page for the lastest version of browser, just use it.
+&lt;a href=&quot;http://www.w3schools.com/tags/tag_doctype.asp&quot;&gt;(other doctype)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;use the meta for IE Compatiblity&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-HTML&quot; data-lang=&quot;HTML&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- render as the edge mode of IE --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;IE=Edge&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- render as IE 10 mode --&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;IE=10&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
 &lt;li&gt;What&amp;rsquo;s the difference between standards mode and quirks mode?&lt;/li&gt;
 &lt;li&gt;What&amp;rsquo;s the difference between HTML and XHTML?&lt;/li&gt;
 &lt;li&gt;Are there any problems with serving pages as &lt;code&gt;application/xhtml+xml&lt;/code&gt;?&lt;/li&gt;
@@ -167,10 +198,27 @@ Make ideas come true. It just works.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Difference between document load event and document ready event?&lt;/li&gt;
 &lt;li&gt;What is the difference between &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt;?&lt;/li&gt;
 &lt;li&gt;Explain the same-origin policy with regards to JavaScript.&lt;/li&gt;
-&lt;li&gt;Make this work:
-&lt;code&gt;javascript
-duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make this work:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;duplicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// [1,2,3,4,5,1,2,3,4,5]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;duplicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// prototype duplicate&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duplicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newLst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duplicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
 &lt;li&gt;Why is it called a Ternary expression, what does the word &amp;ldquo;Ternary&amp;rdquo; indicate?&lt;/li&gt;
 &lt;li&gt;What is &lt;code&gt;&amp;quot;use strict&amp;quot;;&lt;/code&gt;? what are the advantages and disadvantages to using it?&lt;/li&gt;
 &lt;li&gt;Create a for loop that iterates up to &lt;code&gt;100&lt;/code&gt; while outputting &lt;strong&gt;&amp;ldquo;fizz&amp;rdquo;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt;, &lt;code&gt;&amp;quot;buzz&amp;quot;&lt;/code&gt; at multiples of &lt;code&gt;5&lt;/code&gt; and &lt;strong&gt;&amp;ldquo;fizzbuzz&amp;rdquo;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;

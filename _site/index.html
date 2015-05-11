@@ -149,10 +149,26 @@
 I started my tech blog with Jekyll last week, tried YEOMAN to generated website and keep on learning AngularJS, ReactJS, the scaffold is so cool(yo+npm+bower+grunt/gulp).</p></li>
 <li><p>What excites or interests you about coding?<br>
 Make ideas come true. It just works.</p></li>
-<li><p>What is a recent technical challenge you experienced and how did you solve it?</p></li>
+<li><p>What is a recent technical challenge you experienced and how did you solve it?<br>
+When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)</p></li>
+</ul>
+
+<!---
+- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it's possible to add more server to pull the request and do process.
+-->
+
+<ul>
 <li><p>What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?</p></li>
-<li><p>Talk about your preferred development environment.</p></li>
-<li><p>Which version control systems are you familiar with?</p></li>
+<li><p>Talk about your preferred development environment.</p>
+
+<ol>
+<li>Monitor &gt;= 2 (vertical one could be better)</li>
+<li>Internet access (connection speeds &gt; 10Mbps could be better)</li>
+<li>Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch refreshes all platform automatically at the same time when saving the code)</li>
+<li>Juice and coffee</li>
+</ol></li>
+<li><p>Which version control systems are you familiar with?<br>
+Git, SVN</p></li>
 <li><p>Can you describe your workflow when you create a web page?</p></li>
 <li><p>If you have 5 different stylesheets, how would you best integrate them into the site?</p></li>
 <li><p>Can you describe the difference between progressive enhancement and graceful degradation?</p></li>
@@ -175,7 +191,22 @@ Make ideas come true. It just works.</p></li>
 <h4 id="-html-questions:"><a href="#contents"><i id="html-questions" class="fa fa-arrow-up"></i></a> HTML Questions:</h4>
 
 <ul>
-<li>What does a <code>doctype</code> do?</li>
+<li>What does a <code>doctype</code> do?<br>
+&lt;!DOCTYPE&gt; declare the type fo the page, so that the browser can render the content correctly.</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML5 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+</code></pre></div>
+<p>writting page for the lastest version of browser, just use it.
+<a href="http://www.w3schools.com/tags/tag_doctype.asp">(other doctype)</a></p>
+
+<p>use the meta for IE Compatiblity</p>
+<div class="highlight"><pre><code class="language-HTML" data-lang="HTML"><span class="c">&lt;!-- render as the edge mode of IE --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=Edge&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- render as IE 10 mode --&gt;</span>  
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=10&quot;</span><span class="nt">&gt;</span>  
+</code></pre></div>
+<ul>
 <li>What&rsquo;s the difference between standards mode and quirks mode?</li>
 <li>What&rsquo;s the difference between HTML and XHTML?</li>
 <li>Are there any problems with serving pages as <code>application/xhtml+xml</code>?</li>
@@ -274,10 +305,27 @@ Make ideas come true. It just works.</p></li>
 <li>Difference between document load event and document ready event?</li>
 <li>What is the difference between <code>==</code> and <code>===</code>?</li>
 <li>Explain the same-origin policy with regards to JavaScript.</li>
-<li>Make this work:
-<code>javascript
-duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
-</code></li>
+<li>Make this work:</li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">duplicate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]);</span> <span class="c1">// [1,2,3,4,5,1,2,3,4,5]</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">duplicate</span><span class="p">(</span><span class="nx">lst</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">newLst</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">lst</span><span class="p">.</span><span class="nx">length</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span> <span class="nx">newLst</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">lst</span><span class="p">[(</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="o">%</span><span class="nx">lst</span><span class="p">.</span><span class="nx">length</span><span class="p">]));</span>
+  <span class="k">return</span> <span class="nx">newLst</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// prototype duplicate</span>
+<span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">duplicate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">times</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">lst</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">newLst</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">times</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">lst</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">newLst</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">lst</span><span class="p">[</span><span class="nx">j</span><span class="o">++</span><span class="p">]));</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">newLst</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">].</span><span class="nx">duplicate</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<ul>
 <li>Why is it called a Ternary expression, what does the word &ldquo;Ternary&rdquo; indicate?</li>
 <li>What is <code>&quot;use strict&quot;;</code>? what are the advantages and disadvantages to using it?</li>
 <li>Create a for loop that iterates up to <code>100</code> while outputting <strong>&ldquo;fizz&rdquo;</strong> at multiples of <code>3</code>, <code>&quot;buzz&quot;</code> at multiples of <code>5</code> and <strong>&ldquo;fizzbuzz&rdquo;</strong> at multiples of <code>3</code> and <code>5</code></li>

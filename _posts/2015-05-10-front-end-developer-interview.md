@@ -28,11 +28,26 @@ I started my tech blog with Jekyll last week, tried YEOMAN to generated website 
 * What excites or interests you about coding?<br>
 Make ideas come true. It just works.
 
-* What is a recent technical challenge you experienced and how did you solve it?
+* What is a recent technical challenge you experienced and how did you solve it?<br>
+When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)
+
+<!---
+- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it's possible to add more server to pull the request and do process.
+-->
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+
 * Talk about your preferred development environment.
-* Which version control systems are you familiar with?
+  1. Monitor >= 2 (vertical one could be better)
+  2. Internet access (connection speeds > 10Mbps could be better)
+  3. Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch refreshes all platform automatically at the same time when saving the code)
+  4. Juice and coffee
+
+* Which version control systems are you familiar with?<br>
+Git, SVN
+
 * Can you describe your workflow when you create a web page?
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * How would you optimize a website's assets/resources?
@@ -49,7 +64,25 @@ Make ideas come true. It just works.
 
 #### [<i id="html-questions" class="fa fa-arrow-up"></i>](#contents) HTML Questions:
 
-* What does a `doctype` do?
+* What does a `doctype` do?<br>
+<!DOCTYPE> declare the type fo the page, so that the browser can render the content correctly.
+
+```html
+<!-- HTML5 -->
+<!DOCTYPE html>
+```
+writting page for the lastest version of browser, just use it.
+[(other doctype)](http://www.w3schools.com/tags/tag_doctype.asp)
+
+use the meta for IE Compatiblity
+
+```HTML
+<!-- render as the edge mode of IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!-- render as IE 10 mode -->  
+<meta http-equiv="X-UA-Compatible" content="IE=10">  
+```
+
 * What's the difference between standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
 * Are there any problems with serving pages as `application/xhtml+xml`?
@@ -130,9 +163,29 @@ Make ideas come true. It just works.
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
+
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+```javascript
+function duplicate(lst){
+  var newLst = [];
+  for(var i=0; i<lst.length*2; newLst.push(lst[(i++)%lst.length]));
+  return newLst;
+}
+
+// prototype duplicate
+Array.prototype.duplicate = function(times){
+  var lst = this;
+  var newLst = [];
+  for(var i=0; i<times; i++){
+    for(var j=0; j<lst.length; newLst.push(lst[j++]));
+  }
+  return newLst;
+};
+[1,2,3,4,5].duplicate(2);
+```
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
