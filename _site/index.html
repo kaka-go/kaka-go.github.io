@@ -124,7 +124,8 @@
     <span class="post-date">10 May 2015</span>
 
     my answers for <a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">Front-end Developer Interview Questions</a>
-    <!--<p><a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">View the Project on Github</a></p>
+    <!--<p>content:
+<a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">View the Project on Github</a></p>
 
 <p>A list of helpful front-end related questions, just test myself</p>
 
@@ -151,14 +152,15 @@ I started my tech blog with Jekyll last week, tried YEOMAN to generated website 
 Make ideas come true. It just works.</p></li>
 <li><p>What is a recent technical challenge you experienced and how did you solve it?<br>
 When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)</p></li>
-</ul>
-
-<!---
-- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it's possible to add more server to pull the request and do process.
--->
+<li><p>What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?<br></p>
 
 <ul>
-<li><p>What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?</p></li>
+<li>UI: consider about UX firstly, then UI. All features emphasis on user-centered design. ( Common CSS libs: Bootstrap, Foundation...)</li>
+<li>Security: XSS, OAuth2, server side(DDoS...)</li>
+<li>Performance: CDN, Minify files(uglify), localStorage cache. Consider server performance(reverse proxy, memory cache, db replication...)</li>
+<li>SEO: Offer a quality content and services, so that could be easy.</li>
+<li>Maintainability: choose the features on PaaS(AWS,GAE | Aliyun, SAE in China) for better solution. </li>
+</ul></li>
 <li><p>Talk about your preferred development environment.</p>
 
 <ol>
@@ -170,9 +172,13 @@ When using POI to process large Excel files, tomcat server dies with OutOfMemory
 <li><p>Which version control systems are you familiar with?<br>
 Git, SVN</p></li>
 <li><p>Can you describe your workflow when you create a web page?</p></li>
-<li><p>If you have 5 different stylesheets, how would you best integrate them into the site?</p></li>
+<li><p>If you have 5 different stylesheets, how would you best integrate them into the site?<br>
+Check whether there are duplicate styles in different files, merge them.
+In development, append 5 <code>&lt;link&gt;</code> css into <code>&lt;head&gt;</code>.
+Before deploy, concat and minify the css files to one. (Tool like UglifyJS)</p></li>
 <li><p>Can you describe the difference between progressive enhancement and graceful degradation?</p></li>
-<li><p>How would you optimize a website&rsquo;s assets/resources?</p></li>
+<li><p>How would you optimize a website&#39;s assets/resources?<br>
+for images and videos, zip it size and </p></li>
 <li><p>How many resources will a browser download from a given domain at a time?</p>
 
 <ul>
@@ -207,8 +213,8 @@ Git, SVN</p></li>
 <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=10&quot;</span><span class="nt">&gt;</span>  
 </code></pre></div>
 <ul>
-<li>What&rsquo;s the difference between standards mode and quirks mode?</li>
-<li>What&rsquo;s the difference between HTML and XHTML?</li>
+<li>What&#39;s the difference between standards mode and quirks mode?</li>
+<li>What&#39;s the difference between HTML and XHTML?</li>
 <li>Are there any problems with serving pages as <code>application/xhtml+xml</code>?</li>
 <li>How do you serve a page with content in multiple languages?</li>
 <li>What kind of things must you be wary of when design or developing for multilingual sites?</li>
@@ -224,8 +230,8 @@ Git, SVN</p></li>
 <h4 id="-css-questions:"><a href="#contents"><i id="css-questions" class="fa fa-arrow-up"></i></a> CSS Questions:</h4>
 
 <ul>
-<li>What is the difference between classes and ID&rsquo;s in CSS?</li>
-<li>What&rsquo;s the difference between &ldquo;resetting&rdquo; and &ldquo;normalizing&rdquo; CSS? Which would you choose, and why?</li>
+<li>What is the difference between classes and ID&#39;s in CSS?</li>
+<li>What&#39;s the difference between &quot;resetting&quot; and &quot;normalizing&quot; CSS? Which would you choose, and why?</li>
 <li>Describe Floats and how they work.</li>
 <li>Describe z-index and how stacking context is formed.</li>
 <li>Describe BFC(Block Formatting Context) and how it works.</li>
@@ -243,7 +249,7 @@ Git, SVN</p></li>
 <li>Have you used or implemented media queries or mobile specific layouts/CSS?</li>
 <li>Are you familiar with styling SVG?</li>
 <li>How do you optimize your webpages for print?</li>
-<li>What are some of the &ldquo;gotchas&rdquo; for writing efficient CSS?</li>
+<li>What are some of the &quot;gotchas&quot; for writing efficient CSS?</li>
 <li>What are the advantages/disadvantages of using CSS preprocessors?
 
 <ul>
@@ -255,14 +261,14 @@ Git, SVN</p></li>
 <li>Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.</li>
 <li>What does <code>* { box-sizing: border-box; }</code> do? What are its advantages?</li>
 <li>List as many values for the display property that you can remember.</li>
-<li>What&rsquo;s the difference between inline and inline-block?</li>
-<li>What&rsquo;s the difference between a relative, fixed, absolute and statically positioned element?</li>
-<li>The &lsquo;C&rsquo; in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?</li>
+<li>What&#39;s the difference between inline and inline-block?</li>
+<li>What&#39;s the difference between a relative, fixed, absolute and statically positioned element?</li>
+<li>The &#39;C&#39; in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?</li>
 <li>What existing CSS frameworks have you used locally, or in production? How would you change/improve them?</li>
 <li>Have you played around with the new CSS Flexbox or Grid specs?</li>
 <li>How is responsive design different from adaptive design?</li>
 <li>Have you ever worked with retina graphics? If so, when and what techniques did you use?</li>
-<li>Is there any reason you&rsquo;d want to use <code>translate()</code> instead of <em>absolute positioning</em>, or vice-versa? And why?</li>
+<li>Is there any reason you&#39;d want to use <code>translate()</code> instead of <em>absolute positioning</em>, or vice-versa? And why?</li>
 </ul>
 
 <h4 id="-js-questions:"><a href="#contents"><i id="js-questions" class="fa fa-arrow-up"></i></a> JS Questions:</h4>
@@ -272,35 +278,35 @@ Git, SVN</p></li>
 <li>Explain how <code>this</code> works in JavaScript</li>
 <li>Explain how prototypal inheritance works</li>
 <li>What do you think of AMD vs CommonJS?</li>
-<li>Explain why the following doesn&rsquo;t work as an IIFE: <code>function foo(){ }();</code>.
+<li>Explain why the following doesn&#39;t work as an IIFE: <code>function foo(){ }();</code>.
 
 <ul>
 <li>What needs to be changed to properly make it an IIFE?</li>
 </ul></li>
-<li>What&rsquo;s the difference between a variable that is: <code>null</code>, <code>undefined</code> or <code>undeclared</code>?
+<li>What&#39;s the difference between a variable that is: <code>null</code>, <code>undefined</code> or <code>undeclared</code>?
 
 <ul>
 <li>How would you go about checking for any of these states?</li>
 </ul></li>
 <li>What is a closure, and how/why would you use one?</li>
-<li>What&rsquo;s a typical use case for anonymous functions?</li>
+<li>What&#39;s a typical use case for anonymous functions?</li>
 <li>How do you organize your code? (module pattern, classical inheritance?)</li>
-<li>What&rsquo;s the difference between host objects and native objects?</li>
+<li>What&#39;s the difference between host objects and native objects?</li>
 <li>Difference between: <code>function Person(){}</code>, <code>var person = Person()</code>, and <code>var person = new Person()</code>?</li>
-<li>What&rsquo;s the difference between <code>.call</code> and <code>.apply</code>?</li>
+<li>What&#39;s the difference between <code>.call</code> and <code>.apply</code>?</li>
 <li>Explain <code>Function.prototype.bind</code>.</li>
 <li>When would you use <code>document.write()</code>?</li>
-<li>What&rsquo;s the difference between feature detection, feature inference, and using the UA string?</li>
+<li>What&#39;s the difference between feature detection, feature inference, and using the UA string?</li>
 <li>Explain AJAX in as much detail as possible.</li>
-<li>Explain how JSONP works (and how it&rsquo;s not really AJAX).</li>
+<li>Explain how JSONP works (and how it&#39;s not really AJAX).</li>
 <li>Have you ever used JavaScript templating?
 
 <ul>
 <li>If so, what libraries have you used?</li>
 </ul></li>
-<li>Explain &ldquo;hoisting&rdquo;.</li>
+<li>Explain &quot;hoisting&quot;.</li>
 <li>Describe event bubbling.</li>
-<li>What&rsquo;s the difference between an &ldquo;attribute&rdquo; and a &ldquo;property&rdquo;?</li>
+<li>What&#39;s the difference between an &quot;attribute&quot; and a &quot;property&quot;?</li>
 <li>Why is extending built-in JavaScript objects not a good idea?</li>
 <li>Difference between document load event and document ready event?</li>
 <li>What is the difference between <code>==</code> and <code>===</code>?</li>
@@ -326,9 +332,9 @@ Git, SVN</p></li>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">].</span><span class="nx">duplicate</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 <ul>
-<li>Why is it called a Ternary expression, what does the word &ldquo;Ternary&rdquo; indicate?</li>
+<li>Why is it called a Ternary expression, what does the word &quot;Ternary&quot; indicate?</li>
 <li>What is <code>&quot;use strict&quot;;</code>? what are the advantages and disadvantages to using it?</li>
-<li>Create a for loop that iterates up to <code>100</code> while outputting <strong>&ldquo;fizz&rdquo;</strong> at multiples of <code>3</code>, <code>&quot;buzz&quot;</code> at multiples of <code>5</code> and <strong>&ldquo;fizzbuzz&rdquo;</strong> at multiples of <code>3</code> and <code>5</code></li>
+<li>Create a for loop that iterates up to <code>100</code> while outputting <strong>&quot;fizz&quot;</strong> at multiples of <code>3</code>, <code>&quot;buzz&quot;</code> at multiples of <code>5</code> and <strong>&quot;fizzbuzz&quot;</strong> at multiples of <code>3</code> and <code>5</code></li>
 <li>Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?</li>
 <li>Why would you use something like the <code>load</code> event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?</li>
 <li>Explain what a single page app is and how to make one SEO-friendly.</li>
@@ -341,7 +347,7 @@ Git, SVN</p></li>
 
 <ul>
 <li>What are some advantages/disadvantages to testing your code?</li>
-<li>What tools would you use to test your code&rsquo;s functionality?</li>
+<li>What tools would you use to test your code&#39;s functionality?</li>
 <li>What is the difference between a unit test and a functional/integration test?</li>
 <li>What is the purpose of a code style linting tool?</li>
 </ul>
@@ -350,7 +356,7 @@ Git, SVN</p></li>
 
 <ul>
 <li>What tools would you use to find a performance bug in your code?</li>
-<li>What are some ways you may improve your website&rsquo;s scrolling performance?</li>
+<li>What are some ways you may improve your website&#39;s scrolling performance?</li>
 <li>Explain the difference between layout, painting and compositing.</li>
 </ul>
 
@@ -358,12 +364,12 @@ Git, SVN</p></li>
 
 <ul>
 <li>Traditionally, why has it been better to serve site assets from multiple domains?</li>
-<li>Do your best to describe the process from the time you type in a website&rsquo;s URL to it finishing loading on your screen.</li>
+<li>Do your best to describe the process from the time you type in a website&#39;s URL to it finishing loading on your screen.</li>
 <li>What are the differences between Long-Polling, Websockets and Server-Sent Events?</li>
 <li>Explain the following request and response headers:
 
 <ul>
-<li>Diff. between Expires, Date, Age and If-Modified-&hellip;</li>
+<li>Diff. between Expires, Date, Age and If-Modified-...</li>
 <li>Do Not Track</li>
 <li>Cache-Control</li>
 <li>Transfer-Encoding</li>
@@ -451,10 +457,10 @@ Git, SVN</p></li>
 <h4 id="-fun-questions:"><a href="#contents"><i id="fun-questions" class="fa fa-arrow-up"></i></a> Fun Questions:</h4>
 
 <ul>
-<li>What&rsquo;s a cool project that you&rsquo;ve recently worked on?</li>
+<li>What&#39;s a cool project that you&#39;ve recently worked on?</li>
 <li>What are some things you like about the developer tools you use?</li>
 <li>Do you have any pet projects? What kind?</li>
-<li>What&rsquo;s your favorite feature of Internet Explorer?</li>
+<li>What&#39;s your favorite feature of Internet Explorer?</li>
 <li>How do you like your coffee?</li>
 </ul>
 
@@ -547,14 +553,14 @@ When everything seems OK, go on deploying to the real servers.</p>
 
 <p>To increase the speed to access data, <code>mybatis-redis</code> is integrated to cache the database results.
 MySQL Database are configurated as Master-slave Replication, because the read/write may always &gt; 1.
-(Here we didn&rsquo;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
+(Here we didn&#39;t use redis to share sticky session, although there is <code>Redis-Session-Manager</code> for Tomcat, for we have config <code>ip_hash</code> in Nginx) </p>
 
 <p>Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.</p>
 
 <p>Inspired by talking with an engineer of momo, we use <code>openfire</code> as RTC server for instant messaging.
-It&rsquo;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
-(NG: When there are more than 2000 people in one&rsquo;s contact book, it may cause uncompletely transfer problem.) </p>
+It&#39;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
+(NG: When there are more than 2000 people in one&#39;s contact book, it may cause uncompletely transfer problem.) </p>
 
 <p>Users can upload images and attachments to Web Server. 
 Web server handles the upload files, copy them to File Server, and store URL mapping into DB. 
@@ -583,7 +589,7 @@ Web server handles the upload files, copy them to File Server, and store URL map
     Just start the blog from last week. Here are some blogs I am going to post.
     <!--<ul>
 <li><del>Resume Page</del></li>
-<li>Summary of Dr.Seek(贴心医生)App, including Server Admin Console Development, HTTP APIs&hellip;</li>
+<li>Summary of Dr.Seek(贴心医生)App, including Server Admin Console Development, HTTP APIs...</li>
 <li>API test page by AngularJS</li>
 <li>usage of China SVG map</li>
 <li>blood pressure charts and calendar by highchart.js</li>

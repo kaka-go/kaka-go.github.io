@@ -4,7 +4,7 @@
  <title>Kejia.Wu 呉可嘉</title>
  <link href="http://edward9145.github.io/atom.xml" rel="self"/>
  <link href="http://edward9145.github.io/"/>
- <updated>2015-05-12T01:26:56+09:00</updated>
+ <updated>2015-05-13T00:43:34+09:00</updated>
  <id>http://edward9145.github.io</id>
  <author>
    <name>Kejia Wu</name>
@@ -17,7 +17,8 @@
    <link href="http://edward9145.github.io/2015/05/10/front-end-developer-interview/"/>
    <updated>2015-05-10T00:00:00+09:00</updated>
    <id>http://edward9145.github.io/2015/05/10/front-end-developer-interview</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://h5bp.github.io/Front-end-Developer-Interview-Questions/&quot;&gt;View the Project on Github&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;content:
+&lt;a href=&quot;http://h5bp.github.io/Front-end-Developer-Interview-Questions/&quot;&gt;View the Project on Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A list of helpful front-end related questions, just test myself&lt;/p&gt;
 
@@ -44,14 +45,15 @@ I started my tech blog with Jekyll last week, tried YEOMAN to generated website 
 Make ideas come true. It just works.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;What is a recent technical challenge you experienced and how did you solve it?&lt;br&gt;
 When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!---
-- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it&#39;s possible to add more server to pull the request and do process.
---&gt;
+&lt;li&gt;&lt;p&gt;What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?&lt;br&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;UI: consider about UX firstly, then UI. All features emphasis on user-centered design. ( Common CSS libs: Bootstrap, Foundation...)&lt;/li&gt;
+&lt;li&gt;Security: XSS, OAuth2, server side(DDoS...)&lt;/li&gt;
+&lt;li&gt;Performance: CDN, Minify files(uglify), localStorage cache. Consider server performance(reverse proxy, memory cache, db replication...)&lt;/li&gt;
+&lt;li&gt;SEO: Offer a quality content and services, so that could be easy.&lt;/li&gt;
+&lt;li&gt;Maintainability: choose the features on PaaS(AWS,GAE | Aliyun, SAE in China) for better solution. &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Talk about your preferred development environment.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -63,9 +65,13 @@ When using POI to process large Excel files, tomcat server dies with OutOfMemory
 &lt;li&gt;&lt;p&gt;Which version control systems are you familiar with?&lt;br&gt;
 Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Can you describe your workflow when you create a web page?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;If you have 5 different stylesheets, how would you best integrate them into the site?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you have 5 different stylesheets, how would you best integrate them into the site?&lt;br&gt;
+Check whether there are duplicate styles in different files, merge them.
+In development, append 5 &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; css into &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.
+Before deploy, concat and minify the css files to one. (Tool like UglifyJS)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Can you describe the difference between progressive enhancement and graceful degradation?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How would you optimize a website&amp;rsquo;s assets/resources?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How would you optimize a website&amp;#39;s assets/resources?&lt;br&gt;
+for images and videos, zip it size and &lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;How many resources will a browser download from a given domain at a time?&lt;/p&gt;
 
 &lt;ul&gt;
@@ -100,8 +106,8 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X-UA-Compatible&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;IE=10&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between standards mode and quirks mode?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between HTML and XHTML?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between standards mode and quirks mode?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between HTML and XHTML?&lt;/li&gt;
 &lt;li&gt;Are there any problems with serving pages as &lt;code&gt;application/xhtml+xml&lt;/code&gt;?&lt;/li&gt;
 &lt;li&gt;How do you serve a page with content in multiple languages?&lt;/li&gt;
 &lt;li&gt;What kind of things must you be wary of when design or developing for multilingual sites?&lt;/li&gt;
@@ -117,8 +123,8 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;h4 id=&quot;-css-questions:&quot;&gt;&lt;a href=&quot;#contents&quot;&gt;&lt;i id=&quot;css-questions&quot; class=&quot;fa fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt; CSS Questions:&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What is the difference between classes and ID&amp;rsquo;s in CSS?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between &amp;ldquo;resetting&amp;rdquo; and &amp;ldquo;normalizing&amp;rdquo; CSS? Which would you choose, and why?&lt;/li&gt;
+&lt;li&gt;What is the difference between classes and ID&amp;#39;s in CSS?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between &amp;quot;resetting&amp;quot; and &amp;quot;normalizing&amp;quot; CSS? Which would you choose, and why?&lt;/li&gt;
 &lt;li&gt;Describe Floats and how they work.&lt;/li&gt;
 &lt;li&gt;Describe z-index and how stacking context is formed.&lt;/li&gt;
 &lt;li&gt;Describe BFC(Block Formatting Context) and how it works.&lt;/li&gt;
@@ -136,7 +142,7 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Have you used or implemented media queries or mobile specific layouts/CSS?&lt;/li&gt;
 &lt;li&gt;Are you familiar with styling SVG?&lt;/li&gt;
 &lt;li&gt;How do you optimize your webpages for print?&lt;/li&gt;
-&lt;li&gt;What are some of the &amp;ldquo;gotchas&amp;rdquo; for writing efficient CSS?&lt;/li&gt;
+&lt;li&gt;What are some of the &amp;quot;gotchas&amp;quot; for writing efficient CSS?&lt;/li&gt;
 &lt;li&gt;What are the advantages/disadvantages of using CSS preprocessors?
 
 &lt;ul&gt;
@@ -148,14 +154,14 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.&lt;/li&gt;
 &lt;li&gt;What does &lt;code&gt;* { box-sizing: border-box; }&lt;/code&gt; do? What are its advantages?&lt;/li&gt;
 &lt;li&gt;List as many values for the display property that you can remember.&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between inline and inline-block?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between a relative, fixed, absolute and statically positioned element?&lt;/li&gt;
-&lt;li&gt;The &amp;lsquo;C&amp;rsquo; in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between inline and inline-block?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between a relative, fixed, absolute and statically positioned element?&lt;/li&gt;
+&lt;li&gt;The &amp;#39;C&amp;#39; in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?&lt;/li&gt;
 &lt;li&gt;What existing CSS frameworks have you used locally, or in production? How would you change/improve them?&lt;/li&gt;
 &lt;li&gt;Have you played around with the new CSS Flexbox or Grid specs?&lt;/li&gt;
 &lt;li&gt;How is responsive design different from adaptive design?&lt;/li&gt;
 &lt;li&gt;Have you ever worked with retina graphics? If so, when and what techniques did you use?&lt;/li&gt;
-&lt;li&gt;Is there any reason you&amp;rsquo;d want to use &lt;code&gt;translate()&lt;/code&gt; instead of &lt;em&gt;absolute positioning&lt;/em&gt;, or vice-versa? And why?&lt;/li&gt;
+&lt;li&gt;Is there any reason you&amp;#39;d want to use &lt;code&gt;translate()&lt;/code&gt; instead of &lt;em&gt;absolute positioning&lt;/em&gt;, or vice-versa? And why?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;-js-questions:&quot;&gt;&lt;a href=&quot;#contents&quot;&gt;&lt;i id=&quot;js-questions&quot; class=&quot;fa fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt; JS Questions:&lt;/h4&gt;
@@ -165,35 +171,35 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Explain how &lt;code&gt;this&lt;/code&gt; works in JavaScript&lt;/li&gt;
 &lt;li&gt;Explain how prototypal inheritance works&lt;/li&gt;
 &lt;li&gt;What do you think of AMD vs CommonJS?&lt;/li&gt;
-&lt;li&gt;Explain why the following doesn&amp;rsquo;t work as an IIFE: &lt;code&gt;function foo(){ }();&lt;/code&gt;.
+&lt;li&gt;Explain why the following doesn&amp;#39;t work as an IIFE: &lt;code&gt;function foo(){ }();&lt;/code&gt;.
 
 &lt;ul&gt;
 &lt;li&gt;What needs to be changed to properly make it an IIFE?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between a variable that is: &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt; or &lt;code&gt;undeclared&lt;/code&gt;?
+&lt;li&gt;What&amp;#39;s the difference between a variable that is: &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt; or &lt;code&gt;undeclared&lt;/code&gt;?
 
 &lt;ul&gt;
 &lt;li&gt;How would you go about checking for any of these states?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;What is a closure, and how/why would you use one?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s a typical use case for anonymous functions?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s a typical use case for anonymous functions?&lt;/li&gt;
 &lt;li&gt;How do you organize your code? (module pattern, classical inheritance?)&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between host objects and native objects?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between host objects and native objects?&lt;/li&gt;
 &lt;li&gt;Difference between: &lt;code&gt;function Person(){}&lt;/code&gt;, &lt;code&gt;var person = Person()&lt;/code&gt;, and &lt;code&gt;var person = new Person()&lt;/code&gt;?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between &lt;code&gt;.call&lt;/code&gt; and &lt;code&gt;.apply&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between &lt;code&gt;.call&lt;/code&gt; and &lt;code&gt;.apply&lt;/code&gt;?&lt;/li&gt;
 &lt;li&gt;Explain &lt;code&gt;Function.prototype.bind&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;When would you use &lt;code&gt;document.write()&lt;/code&gt;?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between feature detection, feature inference, and using the UA string?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between feature detection, feature inference, and using the UA string?&lt;/li&gt;
 &lt;li&gt;Explain AJAX in as much detail as possible.&lt;/li&gt;
-&lt;li&gt;Explain how JSONP works (and how it&amp;rsquo;s not really AJAX).&lt;/li&gt;
+&lt;li&gt;Explain how JSONP works (and how it&amp;#39;s not really AJAX).&lt;/li&gt;
 &lt;li&gt;Have you ever used JavaScript templating?
 
 &lt;ul&gt;
 &lt;li&gt;If so, what libraries have you used?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Explain &amp;ldquo;hoisting&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Explain &amp;quot;hoisting&amp;quot;.&lt;/li&gt;
 &lt;li&gt;Describe event bubbling.&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the difference between an &amp;ldquo;attribute&amp;rdquo; and a &amp;ldquo;property&amp;rdquo;?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s the difference between an &amp;quot;attribute&amp;quot; and a &amp;quot;property&amp;quot;?&lt;/li&gt;
 &lt;li&gt;Why is extending built-in JavaScript objects not a good idea?&lt;/li&gt;
 &lt;li&gt;Difference between document load event and document ready event?&lt;/li&gt;
 &lt;li&gt;What is the difference between &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt;?&lt;/li&gt;
@@ -219,9 +225,9 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duplicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Why is it called a Ternary expression, what does the word &amp;ldquo;Ternary&amp;rdquo; indicate?&lt;/li&gt;
+&lt;li&gt;Why is it called a Ternary expression, what does the word &amp;quot;Ternary&amp;quot; indicate?&lt;/li&gt;
 &lt;li&gt;What is &lt;code&gt;&amp;quot;use strict&amp;quot;;&lt;/code&gt;? what are the advantages and disadvantages to using it?&lt;/li&gt;
-&lt;li&gt;Create a for loop that iterates up to &lt;code&gt;100&lt;/code&gt; while outputting &lt;strong&gt;&amp;ldquo;fizz&amp;rdquo;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt;, &lt;code&gt;&amp;quot;buzz&amp;quot;&lt;/code&gt; at multiples of &lt;code&gt;5&lt;/code&gt; and &lt;strong&gt;&amp;ldquo;fizzbuzz&amp;rdquo;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a for loop that iterates up to &lt;code&gt;100&lt;/code&gt; while outputting &lt;strong&gt;&amp;quot;fizz&amp;quot;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt;, &lt;code&gt;&amp;quot;buzz&amp;quot;&lt;/code&gt; at multiples of &lt;code&gt;5&lt;/code&gt; and &lt;strong&gt;&amp;quot;fizzbuzz&amp;quot;&lt;/strong&gt; at multiples of &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?&lt;/li&gt;
 &lt;li&gt;Why would you use something like the &lt;code&gt;load&lt;/code&gt; event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?&lt;/li&gt;
 &lt;li&gt;Explain what a single page app is and how to make one SEO-friendly.&lt;/li&gt;
@@ -234,7 +240,7 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;What are some advantages/disadvantages to testing your code?&lt;/li&gt;
-&lt;li&gt;What tools would you use to test your code&amp;rsquo;s functionality?&lt;/li&gt;
+&lt;li&gt;What tools would you use to test your code&amp;#39;s functionality?&lt;/li&gt;
 &lt;li&gt;What is the difference between a unit test and a functional/integration test?&lt;/li&gt;
 &lt;li&gt;What is the purpose of a code style linting tool?&lt;/li&gt;
 &lt;/ul&gt;
@@ -243,7 +249,7 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;What tools would you use to find a performance bug in your code?&lt;/li&gt;
-&lt;li&gt;What are some ways you may improve your website&amp;rsquo;s scrolling performance?&lt;/li&gt;
+&lt;li&gt;What are some ways you may improve your website&amp;#39;s scrolling performance?&lt;/li&gt;
 &lt;li&gt;Explain the difference between layout, painting and compositing.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -251,12 +257,12 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Traditionally, why has it been better to serve site assets from multiple domains?&lt;/li&gt;
-&lt;li&gt;Do your best to describe the process from the time you type in a website&amp;rsquo;s URL to it finishing loading on your screen.&lt;/li&gt;
+&lt;li&gt;Do your best to describe the process from the time you type in a website&amp;#39;s URL to it finishing loading on your screen.&lt;/li&gt;
 &lt;li&gt;What are the differences between Long-Polling, Websockets and Server-Sent Events?&lt;/li&gt;
 &lt;li&gt;Explain the following request and response headers:
 
 &lt;ul&gt;
-&lt;li&gt;Diff. between Expires, Date, Age and If-Modified-&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Diff. between Expires, Date, Age and If-Modified-...&lt;/li&gt;
 &lt;li&gt;Do Not Track&lt;/li&gt;
 &lt;li&gt;Cache-Control&lt;/li&gt;
 &lt;li&gt;Transfer-Encoding&lt;/li&gt;
@@ -344,10 +350,10 @@ Git, SVN&lt;/p&gt;&lt;/li&gt;
 &lt;h4 id=&quot;-fun-questions:&quot;&gt;&lt;a href=&quot;#contents&quot;&gt;&lt;i id=&quot;fun-questions&quot; class=&quot;fa fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt; Fun Questions:&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What&amp;rsquo;s a cool project that you&amp;rsquo;ve recently worked on?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s a cool project that you&amp;#39;ve recently worked on?&lt;/li&gt;
 &lt;li&gt;What are some things you like about the developer tools you use?&lt;/li&gt;
 &lt;li&gt;Do you have any pet projects? What kind?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s your favorite feature of Internet Explorer?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s your favorite feature of Internet Explorer?&lt;/li&gt;
 &lt;li&gt;How do you like your coffee?&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -426,14 +432,14 @@ When everything seems OK, go on deploying to the real servers.&lt;/p&gt;
 
 &lt;p&gt;To increase the speed to access data, &lt;code&gt;mybatis-redis&lt;/code&gt; is integrated to cache the database results.
 MySQL Database are configurated as Master-slave Replication, because the read/write may always &amp;gt; 1.
-(Here we didn&amp;rsquo;t use redis to share sticky session, although there is &lt;code&gt;Redis-Session-Manager&lt;/code&gt; for Tomcat, for we have config &lt;code&gt;ip_hash&lt;/code&gt; in Nginx) &lt;/p&gt;
+(Here we didn&amp;#39;t use redis to share sticky session, although there is &lt;code&gt;Redis-Session-Manager&lt;/code&gt; for Tomcat, for we have config &lt;code&gt;ip_hash&lt;/code&gt; in Nginx) &lt;/p&gt;
 
 &lt;p&gt;Case History is one of important features in the app. Medical record and treatment report may not have the same format. 
 Data Models should have flexible schema, so we choose MongoDB to save this kinds of documents.&lt;/p&gt;
 
 &lt;p&gt;Inspired by talking with an engineer of momo, we use &lt;code&gt;openfire&lt;/code&gt; as RTC server for instant messaging.
-It&amp;rsquo;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
-(NG: When there are more than 2000 people in one&amp;rsquo;s contact book, it may cause uncompletely transfer problem.) &lt;/p&gt;
+It&amp;#39;s open source and extensible, and we can customize suitable plugins for our purpose, such as sending voice, images, case history and other kinds of attachements in message.
+(NG: When there are more than 2000 people in one&amp;#39;s contact book, it may cause uncompletely transfer problem.) &lt;/p&gt;
 
 &lt;p&gt;Users can upload images and attachments to Web Server. 
 Web server handles the upload files, copy them to File Server, and store URL mapping into DB. 
@@ -455,7 +461,7 @@ Web server handles the upload files, copy them to File Server, and store URL map
    <id>http://edward9145.github.io/2015/05/08/todo</id>
    <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;del&gt;Resume Page&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;Summary of Dr.Seek(贴心医生)App, including Server Admin Console Development, HTTP APIs&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Summary of Dr.Seek(贴心医生)App, including Server Admin Console Development, HTTP APIs...&lt;/li&gt;
 &lt;li&gt;API test page by AngularJS&lt;/li&gt;
 &lt;li&gt;usage of China SVG map&lt;/li&gt;
 &lt;li&gt;blood pressure charts and calendar by highchart.js&lt;/li&gt;
@@ -635,13 +641,13 @@ Web server handles the upload files, copy them to File Server, and store URL map
    <link href="http://edward9145.github.io/2012/02/06/whats-jekyll/"/>
    <updated>2012-02-06T00:00:00+09:00</updated>
    <id>http://edward9145.github.io/2012/02/06/whats-jekyll</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project&amp;rsquo;s readme&lt;/a&gt;:&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project&amp;#39;s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory [&amp;hellip;] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
+&lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It&amp;rsquo;s an immensely useful tool and one we encourage you to use here with Hyde.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s an immensely useful tool and one we encourage you to use here with Hyde.&lt;/p&gt;
 
 &lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
 </content>

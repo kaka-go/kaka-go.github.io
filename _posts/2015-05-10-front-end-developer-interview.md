@@ -2,8 +2,9 @@
 layout: post
 comments: false
 title: Front-end Developer Interview Questions
-brief: my answers for <a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">Front-end Developer Interview Questions</a>
+brief: my answers for <a href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">Front-end Developer Interview Questions</a> 
 ---
+content:
 [View the Project on Github](http://h5bp.github.io/Front-end-Developer-Interview-Questions/)
 
 A list of helpful front-end related questions, just test myself
@@ -31,11 +32,12 @@ Make ideas come true. It just works.
 * What is a recent technical challenge you experienced and how did you solve it?<br>
 When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)
 
-<!---
-- Improve the performance of SMS HTTP API by pushing to request into the redis list(as queue), so that it's possible to add more server to pull the request and do process.
--->
-
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?<br>
+  - UI: consider about UX firstly, then UI. All features emphasis on user-centered design. ( Common CSS libs: Bootstrap, Foundation...)
+  - Security: XSS, OAuth2, server side(DDoS...)
+  - Performance: CDN, Minify files(uglify), localStorage cache. Consider server performance(reverse proxy, memory cache, db replication...)
+  - SEO: Offer a quality content and services, so that could be easy.
+  - Maintainability: choose the features on PaaS(AWS,GAE | Aliyun, SAE in China) for better solution. 
 
 * Talk about your preferred development environment.
   1. Monitor >= 2 (vertical one could be better)
@@ -48,9 +50,16 @@ Git, SVN
 
 * Can you describe your workflow when you create a web page?
 
-* If you have 5 different stylesheets, how would you best integrate them into the site?
+* If you have 5 different stylesheets, how would you best integrate them into the site?<br>
+Check whether there are duplicate styles in different files, merge them.
+In development, append 5 ```<link>``` css into ```<head>```.
+Before deploy, concat and minify the css files to one. (Tool like UglifyJS)
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
-* How would you optimize a website's assets/resources?
+
+* How would you optimize a website's assets/resources?<br>
+for images and videos, zip it size and 
+
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
