@@ -18,7 +18,7 @@ Nginx is used as a reverse proxy to redirect the HTTP request to Tomcat servers.
 
 The Spring Web Project will always be packaged as WAR and depolyed on multi-Tomcat servers. 
 To quick test the new features and fix bugs, the project is automatically packaged to WAR and deployed to the test server when SVN `hooks/post-commit`,
-When everything seems OK, go on deploying to the real servers.
+When everything seems OK, go on deploying to the release servers.
 
 To increase the speed to access data, `mybatis-redis` is integrated to cache the database results.
 MySQL Database are configurated as Master-slave Replication, because the read/write may always > 1.

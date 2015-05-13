@@ -30,11 +30,11 @@ I started my tech blog with Jekyll last week, tried YEOMAN to generated website 
 Make ideas come true. It just works.
 
 * What is a recent technical challenge you experienced and how did you solve it?<br>
-When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)
+When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find that reading the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)
 
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?<br>
   - UI: consider about UX firstly, then UI. All features emphasis on user-centered design. ( Common CSS libs: Bootstrap, Foundation...)
-  - Security: XSS, OAuth2, server side(DDoS...)
+  - Security: SSL, OAuth2; XSS, SQL injection, DDoS...
   - Performance: CDN, Minify files(uglify), localStorage cache. Consider server performance(reverse proxy, memory cache, db replication...)
   - SEO: Offer a quality content and services, so that could be easy.
   - Maintainability: choose the features on PaaS(AWS,GAE | Aliyun, SAE in China) for better solution. 
@@ -42,7 +42,7 @@ When using POI to process large Excel files, tomcat server dies with OutOfMemory
 * Talk about your preferred development environment.
   1. Monitor >= 2 (vertical one could be better)
   2. Internet access (connection speeds > 10Mbps could be better)
-  3. Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch refreshes all platform automatically at the same time when saving the code)
+  3. Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch can livereload all platforms)
   4. Juice and coffee
 
 * Which version control systems are you familiar with?<br>

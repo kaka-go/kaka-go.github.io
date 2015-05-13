@@ -142,12 +142,12 @@ I started my tech blog with Jekyll last week, tried YEOMAN to generated website 
 <li><p>What excites or interests you about coding?<br>
 Make ideas come true. It just works.</p></li>
 <li><p>What is a recent technical challenge you experienced and how did you solve it?<br>
-When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find when read the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)</p></li>
+When using POI to process large Excel files, tomcat server dies with OutOfMemory Exception. I used VisualVM to detect whether there is memory leak, run the server and process some small files repeatly for several hours, and review the code to make sure all stream has been closed properly. Then I find that reading the Workbook as an Object need lots of memory, and there is no need to use all of the data at the same time. So I tired to read the workbook by stream, and store the essential info, then do some process. Finally, I got rid fo that annoying OutOfMemory. (Actually, use VBA maybe a better way, but it also need more time)</p></li>
 <li><p>What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?<br></p>
 
 <ul>
 <li>UI: consider about UX firstly, then UI. All features emphasis on user-centered design. ( Common CSS libs: Bootstrap, Foundation...)</li>
-<li>Security: XSS, OAuth2, server side(DDoS...)</li>
+<li>Security: SSL, OAuth2; XSS, SQL injection, DDoS...</li>
 <li>Performance: CDN, Minify files(uglify), localStorage cache. Consider server performance(reverse proxy, memory cache, db replication...)</li>
 <li>SEO: Offer a quality content and services, so that could be easy.</li>
 <li>Maintainability: choose the features on PaaS(AWS,GAE | Aliyun, SAE in China) for better solution. </li>
@@ -157,7 +157,7 @@ When using POI to process large Excel files, tomcat server dies with OutOfMemory
 <ol>
 <li>Monitor &gt;= 2 (vertical one could be better)</li>
 <li>Internet access (connection speeds &gt; 10Mbps could be better)</li>
-<li>Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch refreshes all platform automatically at the same time when saving the code)</li>
+<li>Mac + Windows(Remote/VM) + Phone (Android, iPhone, iPad could be better, so that grunt watch can livereload all platforms)</li>
 <li>Juice and coffee</li>
 </ol></li>
 <li><p>Which version control systems are you familiar with?<br>
