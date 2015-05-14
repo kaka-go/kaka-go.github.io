@@ -31,7 +31,7 @@ Develop HTTP API, Server Admin Console Website for App 贴心医生 [<i class="f
 Develop Hypertension Management Website for Fuwai Hosiptal Research.
 
 - 2012 &nbsp; Microsoft Research Asia (Intership）<br>
-Debug "Bing vs Google" Website
+Debug "Bing It On" - a side-by-side Bing vs Google Website
 
 
 <!---
