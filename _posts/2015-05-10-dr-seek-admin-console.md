@@ -20,6 +20,8 @@ As the server side engineer of this app, I am going to share my experience of th
 
 ### API test page
 
+<p data-height="500" data-theme-id="15092" data-slug-hash="aONawW" data-default-tab="result" data-user="edw" class='codepen'>See the Pen <a href='http://codepen.io/edw/pen/aONawW/'>aONawW</a> by Edward.Wu (<a href='http://codepen.io/edw'>@edw</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Team Work
 
