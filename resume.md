@@ -6,9 +6,9 @@ title: Resume
 <a href="/"><img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/></a>
 
 ## WU KEJIA　呉可嘉
+
 <hr class="split">
 <span class="post-date">
-	<i class="fa fa-phone"></i> &nbsp;080-3579-0987<br>
 	<i class="fa fa-envelope-o"></i> edward9145@gmail.com
 </span>
 
