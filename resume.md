@@ -27,7 +27,7 @@ title: Resume
 ### <i class="fa fa-cog"></i> Experience
 
 - 2013 - 2014 &nbsp; Beijing ZhongKangShangDe Ltd., China <br>
-Develop HTTP API, Server Admin Console Website for App 贴心医生 [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  [`jQuery` `Spring` `Mybatis` `MySQL`]<br>
+Develop HTTP API, Admin Dashboard for App 贴心医生 [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  [`jQuery` `Spring` `Mybatis` `MySQL`]<br>
 Develop Hypertension Management Website for Fuwai Hosiptal Research.
 
 - 2012 &nbsp; Microsoft Research Asia (Intership）<br>
