@@ -22,30 +22,35 @@ title: Resume
  - Programming: `Java` `JavaScript` `Python` `C`
  - Front-End: `Bootstrap` `jQuery` `AngularJS`
  - Back-End: `Spring` `Express` `MySQL` `MongoDB` `Redis` 
- - Editor: `Vim` `Eclipse` `Webstorm`
+ - Editor: `Vim` `Sublime Text` `Eclipse` 
 
 ### <i class="fa fa-cog"></i> Experience
 
 - 2013 - 2014 &nbsp; Beijing ZhongKangShangDe Ltd., China <br>
-Develop HTTP API, Admin Dashboard for App 贴心医生 [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  [`jQuery` `Spring` `Mybatis` `MySQL`]<br>
-Develop Hypertension Management Website for Fuwai Hosiptal Research.
+Lead Development of HTTP API, Admin Dashboard for App 贴心医生 [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  
+Lead Development of Hypertension Management Website for Fuwai Hosiptal Research.
+
+<!--- [`jQuery` `Spring` `Mybatis` `MySQL`]<br> -->
 
 - 2012 &nbsp; Microsoft Research Asia (Intership）<br>
 Debug "Bing It On" - a side-by-side Bing vs Google Website
-
 
 <!---
 
 - 2015 I.S.Brain <br> 
 Dispatched into other companys to do test or debug.
 
-- 2012 &nbsp; User-based Slope One algorithm [<i class="fa fa-link"></i>](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6223488) <br>
-Implement and test the algorithm
-
 - 2011 &nbsp; Kungang Creative Studio <br>
 Develop Android Apps [<i class="fa fa-link"></i>](hhttp://edw.ap01.aws.af.cm/applist.php?lang=EN)
 
 -->
+
+
+### <i class="fa fa-book"></i> Publish
+
+- 2012 &nbsp; User-based Slope One algorithm [<i class="fa fa-link"></i>](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6223488) <br>
+Implement and test the algorithm
+
 
 ### <i class="fa fa-university"></i> Education
 
@@ -54,11 +59,14 @@ Develop Android Apps [<i class="fa fa-link"></i>](hhttp://edw.ap01.aws.af.cm/app
 - 2012 - 2013 &nbsp; Tsukuba University, Japan<br> 
 Exchange to Information Science College 
 	
+<!---
 
 ### <i class="fa fa-star"></i> Certification
 
 - 2013.8 &nbsp; TOEIC 780
 - 2013.7 &nbsp; JLPT N2
+
+-->
 
 ### <i class="fa fa-trophy"></i> Award
 * 2012 &nbsp; Win Google Android Challenge of China University in 3rd [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
