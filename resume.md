@@ -254,9 +254,14 @@ $(function(){
 	$("#en").nextUntil("#en-footer").andSelf().hide();
 	$("#jp").nextUntil("#jp-footer").andSelf().hide();
 	$("#cn").nextUntil("#cn-footer").andSelf().hide();
-	var curr = window.location.href.match(/#([a-z]{2})/)[1];
+	var p = window.location.href.match(/#([a-z]{2})/);
+	var curr = "en";
+	if(p && p[1] && $.inArray(p[1], langs)){
+		curr = p[1];
+	}
 	console.log(curr);
+	$("#" + curr).nextUntil("#" + curr + "-footer").andSelf().show();
 	$("#lang-" + curr).fadeIn();
-	$("#" + curr).nextUntil("#" + curr + "-footer").andSelf().show();	
+
 });
 </script>
