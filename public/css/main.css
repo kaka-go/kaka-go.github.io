@@ -13,7 +13,8 @@
     border: 5px solid #eee;
     border-radius: 78px;
     float: right; 
-    margin-right: 20%
+    margin-right: 17%;
+    margin-bottom: 0;
 }
 
 @media (min-width: 48em) {
@@ -43,8 +44,23 @@
     border-radius: 64px;
     margin-right: 20%
   }
+  .page-break{
+    page-break-after: always;
+  }
+  .flag{
+    display: none;
+  }
 }
 
+#lang-btn {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.flag {
+  width: 64px;
+}
 
 .split {
     margin: 1.0rem 0;

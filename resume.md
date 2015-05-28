@@ -3,6 +3,8 @@ layout: single
 title: Resume
 ---
 
+<header id="en"></header>
+
 <a href="/"><img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/></a>
 
 ## WU KEJIA　呉可嘉
@@ -11,7 +13,6 @@ title: Resume
 <span class="post-date">
 	<i class="fa fa-envelope-o"></i> edward9145@gmail.com
 </span>
-
 
 ### <i class="fa fa-user"></i> Profile
 - Passionate about developing awesome productions with innovative new programming techs
@@ -41,7 +42,7 @@ Debug "Bing It On" - a side-by-side Bing vs Google Website
 Dispatched into other companys to do test or debug.
 
 - 2011 &nbsp; Kungang Creative Studio <br>
-Develop Android Apps [<i class="fa fa-link"></i>](hhttp://edw.ap01.aws.af.cm/applist.php?lang=EN)
+Develop Android Apps [<i class="fa fa-link"></i>](http://edw.ap01.aws.af.cm/applist.php?lang=EN)
 
 -->
 
@@ -59,6 +60,13 @@ Implement and test the algorithm
 - 2012 - 2013 &nbsp; Tsukuba University, Japan<br> 
 Exchange to Information Science College 
 	
+
+
+### <i class="fa fa-trophy"></i> Award
+* 2012 &nbsp; Win Google Android Challenge of China University in 3rd [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
+
+<footer id="en-footer"></footer>
+
 <!---
 
 ### <i class="fa fa-star"></i> Certification
@@ -66,13 +74,6 @@ Exchange to Information Science College
 - 2013.8 &nbsp; TOEIC 780
 - 2013.7 &nbsp; JLPT N2
 
--->
-
-### <i class="fa fa-trophy"></i> Award
-* 2012 &nbsp; Win Google Android Challenge of China University in 3rd [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
-
-
-<!---
 ### More
 In my spare time, I have have ever made some casual games by flash, cocos2d-x, HTML5+JS. Hope you like it.
 [Flappy Beetle](https://itunes.apple.com/cn/app/beetle-flappy/id900088570?l=en&mt=8)
@@ -87,3 +88,175 @@ W11bKCFbXStbXSlbK1tdXSsoWyFbXV0rW11bW11dKVsrIStbXStbK1tdXV0rKCFbXStbXSlbIStbXSsh
 
 -->
 
+
+<header id="jp"></header>
+
+<a href="/"><img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/></a>
+
+## 呉可嘉
+
+<hr class="split">
+<span class="post-date">
+	<i class="fa fa-envelope-o"></i> edward9145@gmail.com
+</span>
+
+### <i class="fa fa-user"></i> 自己PR
+- ゴーデングして、インターネットで素晴らしい物を作りたい。
+- 新しい技術を勉強しで欲しい、もっとチャレンジして欲しい。
+
+### <i class="fa fa-code"></i> スキル
+
+ - Programming: `Java` `JavaScript` `Python` `C`
+ - Front-End: `Bootstrap` `jQuery` `AngularJS`
+ - Back-End: `Spring` `Express` `MySQL` `MongoDB` `Redis` 
+ - Editor: `Vim` `Sublime Text` `Eclipse` 
+
+### <i class="fa fa-cog"></i> 職歴
+
+- 2013 - 2014 &nbsp; Beijing ZhongKangShangDe Ltd., 中国 <br>
+「贴心医生」APPのサーバーHTTP API、Admin管理コンソール開発 [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  
+血圧患者管理システム開発
+
+<!--- [`jQuery` `Spring` `Mybatis` `MySQL`]<br> -->
+
+- 2012 &nbsp; Microsoft Research Asia (インターンシップ）, 中国<br>
+"Bing It On" Bing vs Google ウェアアプリ開発
+
+<!---
+
+- 2015 I.S.Brain <br> 
+Dispatched into other companys to do test or debug.
+
+- 2011 &nbsp; Kungang Creative Studio <br>
+Develop Android Apps [<i class="fa fa-link"></i>](http://edw.ap01.aws.af.cm/applist.php?lang=EN)
+
+-->
+
+### <i class="fa fa-university"></i> 学歴
+
+- 2009 - 2013 &nbsp; 北京航空航天大学, 中国<br> 
+**学士** 計算機科学
+- 2012 - 2013 &nbsp; 筑波大学, 日本<br> 
+交換留学 情報学部 
+
+
+### <i class="fa fa-trophy"></i> 受賞
+* 2012 &nbsp; Google Android 全中国大学生開発コンテスト 第3位 [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
+
+### <i class="fa fa-certificate"></i> 資格
+* 2015 基本情報技術者
+* 2014 JTEST 660（N1と同等）
+* 2013 TOEIC 780
+
+<footer id="jp-footer"></footer>
+
+
+<header id="cn"></header>
+
+<a href="/"><img src="/public/img/avatar.jpg" alt="my avatar" class="resume-avatar"/></a>
+
+## 吴可嘉
+
+<hr class="split">
+<span class="post-date">
+	<i class="fa fa-envelope-o"></i> edward9145@gmail.com
+</span>
+
+### <i class="fa fa-code"></i> 熟悉技术
+
+ - Programming: `Java` `JavaScript` `Python` `C`
+ - Front-End: `Bootstrap` `jQuery` `AngularJS`
+ - Back-End: `Spring` `Express` `MySQL` `MongoDB` `Redis` 
+ - Editor: `Vim` `Sublime Text` `Eclipse` 
+
+### <i class="fa fa-cog"></i> 工作经验
+
+- 2013 - 2014 &nbsp; 北京中康尚德科技有限公司 <br>
+贴心医生”APP 后台数据库设计,接口设计及实现,及运营管理页面开发; [<i class="fa fa-link"></i>](https://itunes.apple.com/us/app/tie-xin-yi-sheng/id934643717?mt=8)  
+高血压患者管理系统开发
+
+<!--- [`jQuery` `Spring` `Mybatis` `MySQL`]<br> -->
+
+- 2012 &nbsp; 微软亚洲研究院 (实习）<br>
+"Bing It On"(Bing VS Google) Web应用开发
+
+- 2011-2012 &nbsp; 昆岗创意工作室 <br>
+Android 应用及休闲游戏开发。[<i class="fa fa-link"></i>](http://edw.ap01.aws.af.cm/applist.php?lang=N)
+
+
+<!---
+
+- 2015 I.S.Brain <br> 
+Dispatched into other companys to do test or debug.
+
+-->
+
+
+### <i class="fa fa-book"></i> 论文发表
+
+- 2012 &nbsp; User-based Slope One algorithm [<i class="fa fa-link"></i>](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6223488) <br>
+算法实现及测试
+
+
+### <i class="fa fa-university"></i> 教育背景
+
+- 2009 - 2013 &nbsp; 北京航空航天大学<br> 
+**本科** 计算机科学与技术
+- 2012 - 2013 &nbsp; 日本筑波大学<br> 
+交流学习 情報学部
+	
+
+### <i class="fa fa-trophy"></i> 获奖情况
+* 2012 &nbsp; Google Android 应用开发中国大学生挑战赛 全国 三等奖 [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
+
+### <i class="fa fa-certificate"></i> 资格证书
+* 2015 基本情報技術者
+* 2014 JTEST 660 (N1同等)
+* 2013 TOEIC 780
+
+<footer id="cn-footer"></footer>
+
+
+<div id="lang-btn">
+	<img id="lang-en" src="/public/img/en.png" alt="resume-en" class="flag" style="display:none;" />
+	<img id="lang-jp" src="/public/img/jp.png" alt="resume-jp" class="flag" style="display:none;" />
+	<img id="lang-cn" src="/public/img/cn.png" alt="resume-cn" class="flag" style="display:none;" />
+</div>
+
+<script>
+// change language button
+var dropdown = false;
+var langs = ["en", "jp", "cn"];
+
+$(function(){
+	$(".flag").click(function(){
+		var id = $(this).attr("id");
+		for(var i=0; i<langs.length; i++){
+			var lang = "lang-" + langs[i];
+			var elem = $("#" + lang);
+			if(dropdown){
+				if(id == lang){
+					$("#" + langs[i]).nextUntil("#"+ langs[i] + "-footer").andSelf().show();
+					window.location = "#" + langs[i];
+				}
+				else{
+					elem.slideToggle();
+					$("#" + langs[i]).nextUntil("#"+ langs[i] + "-footer").andSelf().hide();
+				}
+			}
+			else if(elem.is(":hidden")){
+				elem.slideToggle();
+			}
+		}
+		dropdown = !dropdown;
+	});
+
+	$("#en").nextUntil("#en-footer").andSelf().hide();
+	$("#jp").nextUntil("#jp-footer").andSelf().hide();
+	$("#cn").nextUntil("#cn-footer").andSelf().hide();
+	var curr = window.location.href.match(/#([a-z]{2})/)[1];
+	console.log(curr);
+	$("#lang-" + curr).fadeIn();
+	$("#" + curr).nextUntil("#" + curr + "-footer").andSelf().show();	
+});
+</script>
