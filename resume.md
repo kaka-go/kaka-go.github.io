@@ -141,7 +141,7 @@ Develop Android Apps [<i class="fa fa-link"></i>](http://edw.ap01.aws.af.cm/appl
 
 
 ### <i class="fa fa-trophy"></i> 受賞
-* 2012 &nbsp; Google Android 全中国大学生開発コンテスト 第3位 [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
+* 2012 &nbsp; Google Android開発 全中国大学生コンテスト 第3位 [<i class="fa fa-link"></i>](http://www.google.cn/university/androidchallenge/2012/gallery.html#tab=d1-5)
 
 ### <i class="fa fa-certificate"></i> 資格
 * 2015 基本情報技術者
