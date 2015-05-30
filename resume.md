@@ -101,8 +101,8 @@ W11bKCFbXStbXSlbK1tdXSsoWyFbXV0rW11bW11dKVsrIStbXStbK1tdXV0rKCFbXStbXSlbIStbXSsh
 </span>
 
 ### <i class="fa fa-user"></i> 自己PR
-- ゴーデングして、インターネットで素晴らしい物を作りたい。
-- 新しい技術を勉強しで欲しい、もっとチャレンジして欲しい。
+- ゴーデングして、インターネットで素晴らしい物を作り出したい。
+- 新しい技術を勉強し、実戦中に用いたい。もっとチャレンジが欲しい。
 
 ### <i class="fa fa-code"></i> スキル
 
