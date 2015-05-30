@@ -135,7 +135,7 @@ Develop Android Apps [<i class="fa fa-link"></i>](http://edw.ap01.aws.af.cm/appl
 ### <i class="fa fa-university"></i> 学歴
 
 - 2009 - 2013 &nbsp; 北京航空航天大学, 中国<br> 
-**学士** 計算機科学
+**学士** 計算機科学技術
 - 2012 - 2013 &nbsp; 筑波大学, 日本<br> 
 交換留学 情報学部 
 
