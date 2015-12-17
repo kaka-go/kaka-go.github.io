@@ -9,3 +9,7 @@ The website is built with [Jekyll](http://jekyllrb.com) and [Hyde](http://hyde.g
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/edward9145/edward9145.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
